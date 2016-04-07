@@ -1,0 +1,32 @@
+form {
+	margin: 5% 10% 0 10%;
+}
+
+.form-control {
+	display: inline-block;
+}
+
+.form-control[type=text] {
+	width: 80%;
+}
+
+.form-control[type=submit] {
+	width: 15%;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+img {
+	height: 125px;
+	cursor: pointer;
+}
+
+img:hover {
+	border: 1px solid LightSeaGreen;
+}
+
+#search-results, #cloud {
+	text-align: center;
+}

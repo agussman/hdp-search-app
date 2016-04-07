@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="searchTutorial" >
+<head>
+
+	<script type="text/javascript" src="/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/d3/d3.min.js"></script>
+	<script type="text/javascript" src="/d3-cloud/build/d3.layout.cloud.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+
+	<title></title>
+
+</head>
+
+<body ng-controller="searchController">
+
+	<div class="container-fluid">
+
+		<form>
+		  <div class="form-group">
+			<input type="text" class="form-control" ng-model="searchRequest">
+			<input type="submit" class="form-control" ng-click="search(searchRequest)">
+		  </div>
+		</form>
+
+		<div id="search-results">
+			<a ng-repeat="hit in hits" ng-href={{hit.href}} ng-mouseover="callModel(hit.file)" target="_blank">
+				<img ng-src={{hit.src}} >
+			</a>
+		</div>
+	 	
+	 	<div id="cloud"></div>
+
+	 </div>
+
+</body>
+
+</html>
